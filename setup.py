@@ -53,15 +53,15 @@ install_requires = [
     'torch>=1.13.1,<=2.0.1',
     'datasets==2.10.1',
     'sentencepiece==0.1.97',
-    'einops==0.5.0',
+    'einops',
     'omegaconf>=2.2.3,<3',
     'slack-sdk<4',
     'mosaicml-cli>=0.3,<1',
-    'onnx==1.13.1',
+    'onnx',
     'onnxruntime==1.14.1',
-    'cmake>=3.25.0,<=3.26.3',  # required for triton-pre-mlir below
+    'cmake',  # required for triton-pre-mlir below
     # PyPI does not support direct dependencies, so we remove this line before uploading from PyPI
-    'triton-pre-mlir@git+https://github.com/vchiley/triton.git@triton_pre_mlir_sm90#subdirectory=python',
+    'triton',
 ]
 
 extra_deps = {}
@@ -73,7 +73,7 @@ extra_deps['dev'] = [
     'pytest-cov>=4,<5',
     'pyright==1.1.296',
     'toml>=0.10.2,<0.11',
-    'packaging>=21,<23',
+    'packaging',
 ]
 
 extra_deps['tensorboard'] = [
@@ -81,7 +81,7 @@ extra_deps['tensorboard'] = [
 ]
 
 extra_deps['gpu'] = [
-    'flash-attn==v1.0.3.post0',
+    'flash-attn',
     # PyPI does not support direct dependencies, so we remove this line before uploading from PyPI
     'xentropy-cuda-lib@git+https://github.com/HazyResearch/flash-attention.git@v1.0.3#subdirectory=csrc/xentropy',
 ]
