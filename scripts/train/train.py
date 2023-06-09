@@ -143,6 +143,10 @@ def main(cfg):
     # build tokenizer
     tokenizer = build_tokenizer(cfg.tokenizer)
 
+    # Hack in a pad token if it doesn't exist
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
     # Build Model
     print('Initializing model...')
     with init_context:
