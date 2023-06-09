@@ -46,8 +46,8 @@ import math
 
 import torch
 
-import triton_pre_mlir as triton
-import triton_pre_mlir.language as tl
+import triton
+import triton.language as tl
 
 
 # Disabling autotune for now, set num_warps=4 if headdim=64 and num_warps=8 if headdim=128
